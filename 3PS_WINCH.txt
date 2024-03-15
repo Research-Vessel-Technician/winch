@@ -1,0 +1,39 @@
+3PS WINCH MONITORING SYSTEM
+
+Instrument Make and Model: 
+
+RAW datafile:
+WINCH 2023/08/31 18:00:15.912 3PS  2023/08/31,18:00:15.900,01,   1524, , 1833.0, ,   29.2, , 2664.2
+
+dsLog time stamp:
+WINCH 2023/08/31 18:00:15.912 3PS  2023/08/31,18:00:15.900
+
+WINCH               Winch Data 
+2023/08/31          date in gmt
+18:00:15.900        time in gmt
+data                ,01,   1524, , 1833.0, ,   29.2, , 2664.2 
+
+Data Parsed (comma delimited):
+,01,		Winch Designator 			
+   1524,	Tension Data (lbs)
+ ,              Tension Alarm (blank indicates no alarm)
+ 1833.0,	Payout Data (meters)
+ ,		Payout Alarm (blank indicates no alarm)
+   29.2,	Speed Data (meters/minute)
+ ,		Speed Alarm (blank indicates no alarm)
+ 2664.2		Maximum Tension during cast (lbs)
+
+Winch Designators:
+01	Forward HydroWinch / 0.322" EM cable
+02	Fiber Optic 0.681"
+03	Aft HydroWinch / 1/4" cable
+04	Trawl Winch
+
+Possible Alarm statuses:
+     TENSION HI - There is too much tension on the rope. This is a two stage alarm. This indication is the “CAUTION” level.
+     TENSION HI-HI - There is too much tension on the rope. This is a two stage alarm. This indication is the “OVERLOAD” level.
+     TENSION LOW - Slack Line. Tension is too low.
+     PAYOUT HI – Too much rope is let out
+     PAYOUT LOW – The off board device is getting too close to the vessel.
+     SPEED HI - Line is being let out too fast
+     SPEED LOW - Line is being pulled in too fast. Note this does NOT mean the rope is setting still; it means the setpoint has been exceeded in the negative direction.
